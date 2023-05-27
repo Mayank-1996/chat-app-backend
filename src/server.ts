@@ -22,6 +22,9 @@ app.post("/message/send", (req, res) => {
     const { message, token } = req.body;
     if (message.text) {
       messageReceived(message);
+      if (ChatModal.length > 20) {
+        ChatModal.shift();
+      }
       ChatModal.push(message);
       sendFCMmessage(token, message);
       return res.status(200).send("successfully sent");

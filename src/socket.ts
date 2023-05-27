@@ -5,7 +5,7 @@ import sendFCMmessage from "./helpers/sendFCMmessage";
 let io: Server;
 
 export function initializeSocket() {
-  io = new Server(8800, {
+  io = new Server(5000, {
     cors: {
       origin: "*",
     },
