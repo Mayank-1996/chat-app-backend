@@ -4,7 +4,7 @@ exports.messageReceived = exports.initializeSocket = void 0;
 const socket_io_1 = require("socket.io");
 let io;
 function initializeSocket() {
-    io = new socket_io_1.Server(8800, {
+    io = new socket_io_1.Server(5000, {
         cors: {
             origin: "*",
         },
