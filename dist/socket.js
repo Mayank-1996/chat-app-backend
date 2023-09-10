@@ -20,7 +20,7 @@ function initializeSocket() {
 }
 exports.initializeSocket = initializeSocket;
 function messageReceived(message) {
-  console.log(message);
+  console.log(message,'information');
   io.emit("send_message", message);
 }
 exports.messageReceived = messageReceived;
